@@ -45,13 +45,12 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "nicName": "dc01-nic01",
+    "nicName": "myVMNic",
     "addressPrefix": "10.0.0.0/16",
-    "osDisk": "dc01-os",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
-    "publicIPAddressName": "dc01-pip01",
-    "vmName": "dc01",
+    "publicIPAddressName": "myPublicIP",
+    "vmName": "ukwdc01",
     "virtualNetworkName": "ukw-vnet-dev",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
   },
@@ -152,7 +151,6 @@
             "version": "latest"
           },
           "osDisk": {
-            "name": "[variables('osDisk')]",
             "createOption": "FromImage"
           },
         },
