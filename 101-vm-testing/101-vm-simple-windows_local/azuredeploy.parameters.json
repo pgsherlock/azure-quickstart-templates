@@ -9,7 +9,10 @@
       "value": null
     },
     "dnsLabelPrefix": {
-      "value": "dc01"
+      "value": "petedom"
+    },
+    "vmName": {
+      "value": null
     }
   }
 }
