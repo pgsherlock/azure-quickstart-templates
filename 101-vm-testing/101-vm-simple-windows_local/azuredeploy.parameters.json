@@ -7,9 +7,6 @@
     },
     "dnsLabelPrefix": {
       "value": "petedom"
-    },
-    "vmName": {
-      "value": "dc01"
     }
   }
 }
