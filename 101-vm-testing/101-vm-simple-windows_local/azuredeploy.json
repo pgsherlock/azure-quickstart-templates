@@ -19,7 +19,7 @@
       "metadata": {
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
-    },    
+    },
     "windowsOSVersion": {
       "type": "string",
       "defaultValue": "2016-Datacenter",
@@ -152,7 +152,7 @@
           },
           "osDisk": {
             "createOption": "FromImage"
-          }
+          },
         },
         "networkProfile": {
           "networkInterfaces": [
