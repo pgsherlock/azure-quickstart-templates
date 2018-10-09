@@ -52,13 +52,12 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "nicName": "[concat(parameters('vmName'),'-nic01')]",
-    "osDisk": "[concat(parameters('vmName'),'-os')]",
+    "nicName": "myVMNic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
-    "publicIPAddressName": "[concat(parameters('vmName'),'-pip01')]",
-    "vmName": "[parameters('vmName')]",
+    "publicIPAddressName": "myPublicIP",
+    "vmName": "ukwdc01",
     "virtualNetworkName": "ukw-vnet-dev",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
   },
@@ -144,7 +143,7 @@
       ],
       "properties": {
         "hardwareProfile": {
-          "vmSize": "Basic_A0"
+          "vmSize": "Standard_B1s"
         },
         "osProfile": {
           "computerName": "[variables('vmName')]",
