@@ -1,1 +1,2 @@
 C:\Users\Admin\source\repos\101-vm-simple-windows_local\101-vm-simple-windows_local\obj\Debug\101-vm-simple-windows_local.deployproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\pgsherlock\azure-quickstart-templates\101-vm-testing\101-vm-simple-windows_local\obj\Debug\101-vm-simple-windows_local.deployproj.CoreCompileInputs.cache

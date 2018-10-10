@@ -20,6 +20,13 @@
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
     },
+    "vmName": {
+      "type": "string",
+      "minLength": 3,
+      "metadata": {
+        "description": "VM Name"
+      }
+    },
     "windowsOSVersion": {
       "type": "string",
       "defaultValue": "2016-Datacenter",
@@ -45,12 +52,13 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "nicName": "myVMNic",
+    "nicName": "[concat(parameters('vmName'),'-nic01')]",
+    "osDisk": "[concat(parameters('vmName'),'-os')]",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
-    "publicIPAddressName": "myPublicIP",
-    "vmName": "ukwdc01",
+    "publicIPAddressName": "[concat(parameters('vmName'),'-pip01')]",
+    "vmName": "[parameters('vmName')]",
     "virtualNetworkName": "ukw-vnet-dev",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
   },
@@ -151,6 +159,7 @@
             "version": "latest"
           },
           "osDisk": {
+            "name": "[variables('osDisk')]",
             "createOption": "FromImage"
           },
         },
